@@ -10,7 +10,144 @@
 /* Outline */
 /* Transitions */
 .home-main {
-  padding-block-end: 80px;
+  padding-block-end: 100px;
+}
+
+.promo-section {
+  align-items: flex-start;
+}
+
+.header-chat nav {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+form label {
+  gap: 6px;
+  border-radius: 50rem;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  padding: 5px 10px;
+  background-color: #FFFFFF;
+}
+
+form label input {
+  background-color: transparent;
+  font-family: inherit;
+  line-height: 2;
+  font-size: 16px;
+  border: none;
+}
+
+.chats-section {
+  padding-block-start: 0;
+}
+.chats-section .avatar__logo--moto {
+  translate: 60% 0;
+}
+
+.card {
+  background-color: transparent;
+  margin: 15px;
+}
+
+.card.horizontal {
+  gap: 28px;
+}
+
+.card.horizontal .card-content {
+  padding: 0;
+  padding-block: 10px 7px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+.card.horizontal .card-content .truncate {
+  max-inline-size: 27ch;
+}
+
+.hora-container {
+  position: absolute;
+  margin-left: auto;
+  display: grid;
+}
+
+.hora-container.push__notification-container {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  place-items: flex-end;
+}
+
+.hora-container.push__notification-container .badge.push__notification {
+  position: initial;
+  margin-top: -4px;
+  font-size: 8px;
+}
+
+.chat-body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+.chat-body header nav {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+.chat-body .avatar__logo--moto {
+  translate: 60% 0;
+}
+.chat-body .card.horizontal {
+  gap: 30px;
+}
+
+.chat-view {
+  flex: 1 0 auto;
+}
+
+.card.horizontal .card-content.chat-burble {
+  display: inline-flex;
+  padding: 10px;
+  border-radius: 50rem;
+  border: none;
+  align-items: flex-start;
+  gap: 10px;
+}
+.card.horizontal .card-content.chat-burble--friend {
+  border: 1px solid #8D92A0;
+}
+.card.horizontal .card-content.chat-burble--user {
+  color: #FFFFFF;
+  background-color: #FF7400;
+}
+
+.chat-details-avatar.avatar {
+  margin-right: 15px;
+}
+
+.chat-footer {
+  gap: 8px;
+  justify-content: space-between;
+  padding-block: 8px;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+form {
+  margin-inline: auto;
+}
+
+.chat-footer form label {
+  gap: 6px;
+  border-radius: 50rem;
+  padding-inline: 18px;
+  box-shadow: none;
+}
+
+form label input {
+  font-family: inherit;
+  line-height: 2;
+  font-size: 16px;
+  border: none;
+}
+
+.chat-footer .avatar {
+  margin-right: 16px;
 }
 
 /* ------------------------------------*\
@@ -376,12 +513,16 @@ figure {
   box-shadow: none;
   font-family: "Rajdhani", system-ui, -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen, ubuntu, cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   color: inherit;
+  background-color: #FFFFFF;
   font-weight: 600;
   max-inline-size: 100%;
 }
 .promo.by-points .promo__prices .promo__price {
   font-size: initial;
   color: #FF7400;
+}
+.promo.card {
+  margin-inline: 0;
 }
 .promo__header {
   justify-content: space-between;

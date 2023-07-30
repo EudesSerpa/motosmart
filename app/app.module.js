@@ -1,4 +1,10 @@
 "use strict";
 
 // Define the `motoSmarApp` module
-angular.module("motoSmarApp", ["ngRoute", "core", "homePage"]);
+angular.module("motoSmarApp", [
+	"ngRoute",
+	"core",
+	"homePage",
+	"chatPage",
+	"chatDetailsPage",
+]);

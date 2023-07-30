@@ -9,7 +9,7 @@
 		"product": {
 			"id": 3,
 			"name": "Gorra Royal enfield",
-			"imageUrl": "https://placehold.co/147x144",
+			"imageUrl": "assets/images/promo-pt.png",
 			"price": "33000",
 			"points": "1200"
 		},
@@ -29,7 +29,7 @@
 		"product": {
 			"id": 15,
 			"name": "Maletero 20 litros",
-			"imageUrl": "https://placehold.co/147x144",
+			"imageUrl": "assets/images/promo-normal.png",
 			"price": "68000",
 			"points": "0"
 		},
@@ -37,6 +37,26 @@
 		"options": {
 			"domicile": true,
 			"financing": false
+		}
+	},
+	{
+		"id": 6,
+		"type": "normal",
+		"location": "Santa Marta",
+		"address": "Cra 15 #33E-33",
+		"userDistance": "20Km",
+		"liked": false,
+		"product": {
+			"id": 15,
+			"name": "Maletero 20 litros",
+			"imageUrl": "assets/images/promo-normal.png",
+			"price": "900",
+			"points": "200"
+		},
+		"discount": 20,
+		"options": {
+			"domicile": true,
+			"financing": true
 		}
 	}
 ]

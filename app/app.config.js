@@ -8,13 +8,13 @@ angular.module("motoSmarApp").config([
 				template: "<home-page></home-page>",
 			})
 
-			// .when("/chat/:chatId", {
-			// 	template: "<chat></chat>",
-			// })
+			.when("/chat/", {
+				template: "<chat-page></chat-page>",
+			})
 
-			// .when("/chat/:chatId", {
-			// 	template: "<chat-detail></chat-detail>",
-			// })
+			.when("/chat/:chatId", {
+				template: "<chat-details-page></chat-details-page>",
+			})
 
 			.otherwise({ redirectTo: "/" });
 	},

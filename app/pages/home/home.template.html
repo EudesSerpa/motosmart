@@ -54,7 +54,7 @@
 					</a>
 				</li>
 				<li>
-					<a href="#!/" aria-label="Ir al chat">
+					<a href="#!/chat" aria-label="Ir al chat">
 						<div class="push__notification-container">
 							<img
 								class="nav__icon responsive-img"
@@ -118,6 +118,9 @@
 		<h5>Promociones</h5>
 
 		<promo-component></promo-component>
+	</section>
+	<section class="post-section section">
+		<post-component></post-component>
 	</section>
 </main>
 
@@ -208,17 +211,3 @@
 		</div>
 	</nav>
 </aside>
-
-<script>
-	// Materialize JS init
-	M.AutoInit();
-</script>
-<script>
-	// Materialize JS init
-	const elems = document.querySelectorAll(".carousel");
-	const instances = M.Carousel.init(elems, {
-		fullWidth: true,
-		indicators: true,
-		padding: 0,
-	});
-</script>

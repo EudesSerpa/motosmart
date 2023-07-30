@@ -10,6 +10,7 @@
 	box-shadow: none;
 	font-family: $font-accent;
 	color: inherit;
+	background-color: $pure-white;
 	font-weight: $font-weight-semi-bold;
 	max-inline-size: 100%;
 
@@ -21,6 +22,10 @@
 				color: $primary-color;
 			}
 		}
+	}
+
+	&.card {
+		margin-inline: 0;
 	}
 
 	&__header {
