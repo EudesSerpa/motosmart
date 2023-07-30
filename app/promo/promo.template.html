@@ -1,0 +1,125 @@
+<div class="promos scroller-container">
+	<div class="scroller">
+		<article
+			ng-class="['promo', promo.type, 'card', '
+			carousel-item']"
+			ng-repeat="promo in vm.promos"
+		>
+			<header class="promo__header container valign-wrapper">
+				<div class="promo__location valign-wrapper">
+					<img
+						class="responsive-img"
+						ng-src="assets/icons/location.svg"
+						alt=""
+						width="22"
+						height="22"
+						aria-hidden="true"
+					/>
+					<p>{{promo.location}}</p>
+				</div>
+
+				<button class="promo__fav-btn btn-flat" aria-label="Agregar a deseados">
+					<img
+						class="responsive-img"
+						ng-src="assets/icons/{{promo.type === 'by-points' ? 'heart-mp' : 'heart'}}.svg"
+						alt=""
+						width="23"
+						height="22"
+						aria-hidden="true"
+					/>
+				</button>
+			</header>
+
+			<figure class="card-image">
+				<img
+					class="responsive-img"
+					ng-src="{{promo.product.imageUrl}}"
+					alt="{{promo.product.name}}"
+					width="147"
+					height="144"
+				/>
+			</figure>
+
+			<footer class="promo__details card-content">
+				<div class="promo__details-header">
+					<h4 class="promo__title">{{promo.product.name}}</h4>
+
+					<span class="promo__dcto badge">-{{promo.discount}}</span>
+				</div>
+
+				<!-- Normal promo -->
+				<div ng-if="promo.type === 'normal'" class="promo__options">
+					<div class="promo__prices">
+						<p class="promo__price promo__price--old">
+							<s>COP {{promo.product.price | currency : "" : 0 | comma2dot}}</s>
+						</p>
+						<p class="promo__price promo__price--new">
+							<span
+								>COP {{vm.getNewPrice({ price: promo.product.price, discount:
+								promo.discount}) | currency : "" : 0 | comma2dot}}</span
+							>
+						</p>
+					</div>
+
+					<p class="promo__address">{{promo.address}}</p>
+
+					<p class="promo__option promo__option--distance valign-wrapper">
+						<img
+							class="responsive-img"
+							ng-src="assets/icons/near-indicator.svg"
+							alt=""
+							width="22"
+							height="22"
+							aria-hidden="true"
+						/>
+						<span>{{promo.userDistance}}</span>
+					</p>
+				</div>
+
+				<!-- By points promo  -->
+				<div ng-if="promo.type === 'by-points'" class="promo__options">
+					<p class="promo__prices valign-wrapper">
+						<span
+							>Canjealo por
+							<span class="promo__price"
+								>{{promo.product.points | currency : "" : 0 | comma2dot |
+								comma2dot}}</span
+							></span
+						>
+						<img
+							class="responsive-img"
+							ng-src="assets/icons/moto-puntos-primary.svg"
+							alt=""
+							width="22"
+							height="22"
+							aria-hidden="true"
+						/>
+					</p>
+
+					<p class="promo__option valign-wrapper">
+						<img
+							class="responsive-img"
+							ng-src="assets/icons/financing.svg"
+							alt=""
+							width="22"
+							height="22"
+							aria-hidden="true"
+						/>
+						<span>financiamiento</span>
+					</p>
+					<p class="promo__option valign-wrapper">
+						<img
+							class="responsive-img"
+							ng-src="assets/icons/domicile.svg"
+							alt=""
+							width="22"
+							height="22"
+							aria-hidden="true"
+						/>
+						<span>Envio a domicilio</span>
+					</p>
+				</div>
+			</footer>
+		</article>
+	</div>
+</div>

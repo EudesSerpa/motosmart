@@ -59,6 +59,7 @@ angular.module("post").component("postComponent", {
 					const elems = document.querySelectorAll(".carousel");
 
 					M.Carousel.init(elems, {
+						dist: 0,
 						fullWidth: true,
 						indicators: true,
 						padding: 0,

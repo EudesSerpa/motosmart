@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&display=swap");
 @import url("https://fonts.cdnfonts.com/css/avenir");
 /* Colors */
 /* Gradients */
@@ -364,6 +364,85 @@ figure {
   padding: 0;
   text-transform: initial;
   vertical-align: initial;
+}
+
+.promos .scroller {
+  gap: 15px;
+}
+
+.promo {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: none;
+  font-family: "Rajdhani", system-ui, -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen, ubuntu, cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: inherit;
+  font-weight: 600;
+  max-inline-size: 100%;
+}
+.promo.by-points .promo__prices .promo__price {
+  font-size: initial;
+  color: #FF7400;
+}
+.promo__header {
+  justify-content: space-between;
+  padding-block: 16px 11px;
+}
+.promo__location {
+  gap: 4px;
+  font: 400 1.25rem "Avenir", system-ui, -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen, ubuntu, cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: #FF7400;
+}
+.promo__location p {
+  margin: 0;
+}
+.promo__fav-btn {
+  display: inline-flex;
+  gap: 4px;
+  align-items: center;
+}
+.promo__details.card-content {
+  padding: 10px 10px 5px;
+}
+.promo__details-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-block: 0 22px;
+  font-weight: 700;
+}
+.promo__details-header .promo__title {
+  margin-block: 0;
+  font-size: 24px;
+  color: #333333;
+  font-weight: inherit;
+  max-inline-size: 14ch;
+}
+.promo__details-header .promo__dcto {
+  font-size: 18px;
+  color: #52BA52;
+}
+.promo__prices {
+  gap: 3px;
+  color: #333333;
+  font-weight: 700;
+}
+.promo__prices .promo__price {
+  font-size: 18px;
+}
+.promo__prices .promo__price--old {
+  font-weight: 400;
+  color: #8D92A0;
+}
+.promo__options {
+  display: grid;
+  gap: 7px;
+}
+.promo__options .promo__option {
+  gap: 6px;
+}
+.promo__options .promo__option--distance {
+  font-family: "Avenir", system-ui, -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen, ubuntu, cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 400;
 }
 
 /*# sourceMappingURL=styles.css.map */
