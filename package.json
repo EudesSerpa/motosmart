@@ -6,6 +6,7 @@
 		"prestart": "npm install",
 		"start": "watch-http-server ./app -a localhost -p 8000",
 		"postinstall": "npm run copy-libs",
+		"sass": "sass --watch app/styles.scss:app/styles.css",
 		"test": "karma start karma.conf.js",
 		"copy-libs": "cpx \"node_modules/{angular,angular-*,bootstrap/dist,jquery/dist}/**/*\" app/lib -C"
 	},
