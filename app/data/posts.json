@@ -1,0 +1,71 @@
+[
+	{
+		"userData": {
+			"id": 1,
+			"name": "Mike Thompson",
+			"role": "crack",
+			"avatar": "assets/images/crack-mike.png",
+			"moto": "assets/images/crack-mike-moto.png",
+			"followed": false
+		},
+		"postData": {
+			"id": 1,
+			"images": [
+				"assets/images/post-image.png",
+				"assets/images/post-image-5.png",
+				"assets/images/post-image-4.png",
+				"assets/images/post-image-2.png",
+				"assets/images/post-image-3.png"
+			],
+			"liked": false,
+			"totalLikes": 8925,
+			"totalComments": 1200,
+			"description": "Un paseo unico en africa, los invito a todos a esta experiencia unica.",
+			"timestamp": "Hace un 1 dia"
+		}
+	},
+	{
+		"userData": {
+			"id": 2,
+			"name": "Honda Dream",
+			"role": "aliado",
+			"avatar": "assets/images/ally-honda.png",
+			"moto": "assets/images/ally-honda-moto.png",
+			"followed": false
+		},
+		"postData": {
+			"id": 5,
+			"images": [
+				"assets/images/post-image-3.png"
+			],
+			"liked": false,
+			"totalLikes": 3333,
+			"totalComments": 333,
+			"description": "Disfruta de una prueba de ruta de esta Honda CRF 250, en el mejor parque de diversiones para off. BRAAAP PARK",
+			"timestamp": "Hace un 1 dia"
+		}
+	},
+	{
+		"userData": {
+			"id": 15,
+			"name": "Henry Gomez",
+			"role": "usuario",
+			"avatar": "assets/images/user-henry.png",
+			"moto": "assets/images/user-henry-moto.png",
+			"followed": false
+		},
+		"postData": {
+			"id": 1,
+			"images": [
+				"assets/images/post-image-4.png",
+				"assets/images/post-image-2.png",
+				"assets/images/post-image-5.png"
+			],
+			"liked": false,
+			"totalLikes": 123,
+			"totalComments": 2,
+			"description": "Recorriendo las carreteras de colombia en mi motocicleta Royal Enfield 😎😎",
+			"timestamp": "Hace un 1 dia"
+		}
+	}
+]

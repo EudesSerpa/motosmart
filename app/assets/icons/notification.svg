@@ -1,0 +1,10 @@
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+	<g id="Component 1">
+		<rect id="Rectangle 11" x="8" width="4" height="2" rx="1" fill="#8D92A0" />
+		<path id="Rectangle 13" d="M8 19H12C12 19.5523 11.5523 20 11 20H9C8.44772 20 8 19.5523 8 19Z"
+			fill="#8D92A0" />
+		<path id="Rectangle 10"
+			d="M15 13.75V14.1466L15.2718 14.4354L17.6856 17H2.31442L4.7282 14.4354L5 14.1466V13.75V7.375C5 4.34849 7.29483 2 10 2C12.7052 2 15 4.34849 15 7.375V13.75Z"
+			stroke="#8D92A0" stroke-width="2" />
+	</g>
+</svg>

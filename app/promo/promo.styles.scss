@@ -1,0 +1,107 @@
+.promos {
+	& .scroller {
+		gap: 15px;
+	}
+}
+
+.promo {
+	border-radius: 10px;
+	overflow: hidden;
+	box-shadow: none;
+	font-family: $font-accent;
+	color: inherit;
+	background-color: $pure-white;
+	font-weight: $font-weight-semi-bold;
+	max-inline-size: 100%;
+
+	// Promo type: by puntos
+	&.by-points {
+		& .promo__prices {
+			& .promo__price {
+				font-size: initial;
+				color: $primary-color;
+			}
+		}
+	}
+
+	&.card {
+		margin-inline: 0;
+	}
+
+	&__header {
+		justify-content: space-between;
+		padding-block: 16px 11px;
+	}
+
+	&__location {
+		gap: 4px;
+		font: $font-weight-regular 1.25rem $font-body;
+		color: $primary-color;
+
+		& p {
+			margin: 0;
+		}
+	}
+
+	&__fav-btn {
+		display: inline-flex;
+		gap: 4px;
+		align-items: center;
+	}
+
+	&__details {
+		&.card-content {
+			padding: 10px $content-padding-inline 5px;
+		}
+
+		&-header {
+			display: flex;
+			align-items: flex-start;
+			justify-content: space-between;
+			margin-block: 0 22px;
+			font-weight: $font-weight-bold;
+
+			& .promo__title {
+				margin-block: 0;
+				font-size: 24px;
+				color: $grey-dark;
+				font-weight: inherit;
+				max-inline-size: 14ch;
+			}
+
+			& .promo__dcto {
+				font-size: 18px;
+				color: $green-dcto;
+			}
+		}
+	}
+
+	&__prices {
+		gap: 3px;
+		color: $grey-dark;
+		font-weight: $font-weight-bold;
+
+		& .promo__price {
+			font-size: 18px;
+
+			&--old {
+				font-weight: $font-weight-regular;
+				color: $grey-2;
+			}
+		}
+	}
+
+	&__options {
+		display: grid;
+		gap: 7px;
+
+		& .promo__option {
+			gap: 6px;
+
+			&--distance {
+				font-family: $font-body;
+				font-weight: $font-weight-regular;
+			}
+		}
+	}
+}

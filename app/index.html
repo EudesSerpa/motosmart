@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es" ng-app="motoSmarApp">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Moto Smart</title>
+
+		<!-- Materialize -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+		/>
+		<link
+			href="https://fonts.googleapis.com/icon?family=Material+Icons"
+			rel="stylesheet"
+		/>
+
+		<!-- Own Styles -->
+		<link rel="stylesheet" href="./styles.css" />
+
+		<!-- AngularJS -->
+		<script src="lib/angular/angular.js"></script>
+		<script src="lib/angular-resource/angular-resource.js"></script>
+		<script src="lib/angular-route/angular-route.js"></script>
+
+		<!-- Own JS -->
+		<script src="app.module.js"></script>
+		<script src="app.config.js"></script>
+		<script src="core/core.module.js"></script>
+		<!-- Services -->
+		<script src="core/postsServices/posts.module.js"></script>
+		<script src="core/postsServices/posts.service.js"></script>
+		<script src="core/promosServices/promos.module.js"></script>
+		<script src="core/promosServices/promos.service.js"></script>
+		<!-- Filters -->
+		<script src="core/comma2dot/comma2dot.filter.js"></script>
+		<!-- Pages -->
+		<script src="./pages/home/home.module.js"></script>
+		<script src="./pages/home/home.component.js"></script>
+		<script src="./pages/chat/chat.module.js"></script>
+		<script src="./pages/chat/chat.component.js"></script>
+		<script src="./pages/chat-details/chat-details.module.js"></script>
+		<script src="./pages/chat-details/chat-details.component.js"></script>
+		<!-- Features -->
+		<script src="./post/post.module.js"></script>
+		<script src="./post/post.component.js"></script>
+		<script src="./promo/promo.module.js"></script>
+		<script src="./promo/promo.component.js"></script>
+	</head>
+
+	<body>
+		<div>
+			<div ng-view></div>
+		</div>
+
+		<!-- Materialize -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+	</body>
+</html>

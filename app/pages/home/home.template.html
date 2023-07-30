@@ -1,0 +1,213 @@
+<header class="header">
+	<nav class="nav">
+		<div class="nav-wrapper container">
+			<a href="#!/">
+				<img
+					class="nav__logo responsive-img"
+					src="/assets/images/logo-motosmart.webp"
+					alt="Ir a la página de inicio"
+					width="150"
+					height="20"
+				/>
+			</a>
+
+			<ul class="nav__list">
+				<li>
+					<a class="nav__link" href="#!/" aria-label="Agregar contenido">
+						<img
+							class="nav__icon responsive-img"
+							src="./assets/icons/add.svg"
+							alt=""
+							aria-hidden="true"
+							width="18"
+							height="18"
+						/>
+					</a>
+				</li>
+				<li>
+					<a href="#!/" aria-label="Notificationes">
+						<div class="push__notification-container">
+							<img
+								class="nav__icon responsive-img"
+								src="./assets/icons/notification.svg"
+								alt=""
+								aria-hidden="true"
+								width="18"
+								height="18"
+							/>
+							<span class="push__notification new badge" data-badge-caption=""
+								>91</span
+							>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#!/" aria-label="Buscar">
+						<img
+							class="nav__icon responsive-img"
+							src="./assets/icons/search.svg"
+							alt=""
+							aria-hidden="true"
+							width="18"
+							height="18"
+						/>
+					</a>
+				</li>
+				<li>
+					<a href="#!/chat" aria-label="Ir al chat">
+						<div class="push__notification-container">
+							<img
+								class="nav__icon responsive-img"
+								src="./assets/icons/chat.svg"
+								alt=""
+								aria-hidden="true"
+								width="28"
+								height="18"
+							/>
+							<span class="push__notification new badge" data-badge-caption=""
+								>91</span
+							>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<section class="categories section">
+		<div class="scroller-container container">
+			<ul class="categories__list scroller browser-default">
+				<li>
+					<a class="category__item pill gradient-border active" href="#!/"
+						>Global</a
+					>
+				</li>
+				<li>
+					<a class="category__item pill" href="#!/">Cracks</a>
+				</li>
+				<li>
+					<a class="category__item pill" href="#!/">Clasificados</a>
+				</li>
+				<li>
+					<a class="category__item pill" href="#!/">Educational</a>
+				</li>
+				<li>
+					<a class="category__item pill" href="#!/">Clubes</a>
+				</li>
+				<li>
+					<a class="category__item pill" href="#!/">Moto turismo</a>
+				</li>
+				<li>
+					<a class="category__item pill" href="#!/">Lanzamientos</a>
+				</li>
+				<li>
+					<a class="category__item pill" href="#!/">Alianzas</a>
+				</li>
+				<li>
+					<a class="category__item pill" href="#!/">GPS</a>
+				</li>
+			</ul>
+		</div>
+	</section>
+</header>
+
+<main class="home-main">
+	<section class="post-section section">
+		<post-component></post-component>
+	</section>
+	<section class="promo-section section container">
+		<h5>Promociones</h5>
+
+		<promo-component></promo-component>
+	</section>
+	<section class="post-section section">
+		<post-component></post-component>
+	</section>
+</main>
+
+<aside class="aside">
+	<a
+		href="#!/"
+		class="qr-cta btn-floating btn-large waves-effect waves-light z-depth-3"
+		aria-label="Capturar codigo QR"
+	>
+		<img
+			src="./assets/icons/qr.svg"
+			alt=""
+			aria-hidden="true"
+			width="42"
+			height="42"
+		/>
+	</a>
+
+	<nav class="aside__nav nav">
+		<div class="nav-wrapper container">
+			<ul class="aside__list valign-wrapper">
+				<li class="aside__item">
+					<a class="aside__link" href="#!/" aria-label="Agregar contenido">
+						<img
+							class="aside__icon responsive-img"
+							src="./assets/icons/inicio.svg"
+							alt=""
+							aria-hidden="true"
+							width="24"
+							height="24"
+						/>
+						<span>Inicio</span>
+					</a>
+				</li>
+				<li class="aside__item">
+					<a class="aside__link" href="#!/" aria-label="Notificationes">
+						<img
+							class="aside__icon responsive-img"
+							src="./assets/icons/aliados.svg"
+							alt=""
+							aria-hidden="true"
+							width="24"
+							height="24"
+						/>
+						<span>Aliados</span>
+					</a>
+				</li>
+				<li class="aside__item">
+					<a class="aside__link" href="#!/" aria-label="Buscar">
+						<img
+							class="aside__icon responsive-img"
+							src="./assets/icons/moto-puntos.svg"
+							alt=""
+							aria-hidden="true"
+							width="24"
+							height="24"
+						/>
+						<span>MotoPuntos</span>
+					</a>
+				</li>
+				<li class="aside__item">
+					<a class="aside__link" href="#!/" aria-label="Ir al chat">
+						<img
+							class="aside__icon responsive-img"
+							src="./assets/icons/premium.svg"
+							alt=""
+							aria-hidden="true"
+							width="24"
+							height="24"
+						/>
+						<span>Premium</span>
+					</a>
+				</li>
+				<li class="aside__item">
+					<a class="aside__link" href="#!/" aria-label="Ir al chat">
+						<img
+							class="aside__icon responsive-img"
+							src="./assets/icons/perfil.svg"
+							alt=""
+							aria-hidden="true"
+							width="24"
+							height="24"
+						/>
+						<span>Perfil</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+</aside>

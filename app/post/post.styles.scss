@@ -1,0 +1,129 @@
+.post {
+	background-color: $background;
+
+	&.crack {
+		.post__header {
+			background-color: $grey-dark;
+		}
+
+		.post__cta--report {
+			color: $white;
+		}
+	}
+
+	&__header {
+		padding-block: 7px;
+
+		&-container {
+			margin-block: 0;
+		}
+	}
+
+	&__user {
+		gap: 20px;
+
+		&-role {
+			font: $font-weight-bold 18px $font-accent;
+			text-transform: capitalize;
+		}
+	}
+
+	&__ctas.col {
+		justify-content: flex-end;
+		gap: 4px;
+		padding: 0;
+	}
+
+	&__cta {
+		text-transform: capitalize;
+
+		&--follow {
+			color: $primary-color;
+		}
+
+		&--report {
+			padding: 0;
+			color: $grey;
+		}
+
+		&:is(:focus-visible, :active) {
+			outline: $outline;
+		}
+	}
+
+	&__body {
+		margin: 0;
+	}
+
+	&__carousel {
+		block-size: 360px;
+		margin: 0;
+
+		&.carousel .carousel-item {
+			min-block-size: initial;
+			visibility: initial;
+
+			& img {
+				object-fit: cover;
+			}
+		}
+
+
+		& .indicators .indicator-item {
+			background-color: $grey-2;
+
+			&.active {
+				background-color: $blue-duo;
+			}
+		}
+	}
+
+	&__details {
+		padding: 14px;
+		color: $grey-2;
+
+		&-highlight {
+			color: $grey;
+		}
+	}
+
+	&__metadata {
+		display: grid;
+		gap: 8px;
+
+		&-ctas {
+			gap: 24px;
+		}
+
+		&-cta {
+			display: inline-flex;
+			gap: 4px;
+			align-items: center;
+			padding-inline: 0;
+
+			&--comment {
+				& span {
+					margin-block-start: 10px;
+					color: $grey-2;
+				}
+			}
+		}
+	}
+
+	&__description {
+		& .post__user-role {
+			font-family: unset;
+			font-weight: unset;
+		}
+	}
+
+	&__add-coment {
+		gap: 16px;
+	}
+
+	&__translate {
+		padding: 0;
+		text-transform: initial;
+		vertical-align: initial;
+	}
+}

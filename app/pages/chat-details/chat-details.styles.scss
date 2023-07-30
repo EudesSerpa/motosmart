@@ -1,0 +1,72 @@
+.chat-body {
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+
+	& header nav {
+		border-bottom: 1px solid #00000033;
+	}
+
+	& .avatar__logo--moto {
+		translate: 60% 0;
+	}
+
+	& .card.horizontal {
+		gap: 30px;
+	}
+}
+
+.chat-view {
+	flex: 1 0 auto;
+}
+
+.card.horizontal .card-content.chat-burble {
+	display: inline-flex;
+	padding: 10px;
+	border-radius: 50rem;
+	border: none;
+	align-items: flex-start;
+	gap: 10px;
+
+	&--friend {
+		border: 1px solid $grey-2;
+	}
+
+	&--user {
+		color: $pure-white;
+		background-color: $primary-color;
+	}
+}
+
+.chat-details-avatar.avatar {
+	margin-right: 15px;
+}
+
+.chat-footer {
+	gap: 8px;
+	justify-content: space-between;
+	padding-block: 8px;
+	border-top: 1px solid #00000033;
+}
+
+form {
+	margin-inline: auto;
+}
+
+.chat-footer form label {
+	gap: 6px;
+	border-radius: 50rem;
+	padding-inline: 18px;
+	box-shadow: none;
+}
+
+form label input {
+	font-family: inherit;
+	line-height: 2;
+	font-size: 16px;
+	border: none;
+}
+
+.chat-footer .avatar {
+	margin-right: 16px;
+}
