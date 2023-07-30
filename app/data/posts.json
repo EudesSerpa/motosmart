@@ -36,10 +36,6 @@
 		"postData": {
 			"id": 5,
 			"images": [
-				"https://placehold.co/360",
-				"https://placehold.co/360",
-				"https://placehold.co/360",
-				"https://placehold.co/360",
 				"https://placehold.co/360"
 			],
 			"liked": false,
@@ -61,8 +57,6 @@
 		"postData": {
 			"id": 1,
 			"images": [
-				"https://placehold.co/360",
-				"https://placehold.co/360",
 				"https://placehold.co/360",
 				"https://placehold.co/360",
 				"https://placehold.co/360"

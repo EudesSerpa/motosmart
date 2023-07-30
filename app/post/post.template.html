@@ -46,17 +46,11 @@
 
 	<figure class="post__body">
 		<ul class="post__carousel carousel carousel-slider center">
-			<!-- <li class="carousel-item" ng-repeat="img in post.postData.images">
+			<li
+				class="carousel-item"
+				ng-repeat="img in post.postData.images track by $index"
+			>
 				<img ng-src="{{img}}" alt="" loading="lazy" />
-			</li> -->
-			<li class="carousel-item">
-				<img ng-src="https://placehold.co/360" alt="" loading="lazy" />
-			</li>
-			<li class="carousel-item">
-				<img ng-src="https://placehold.co/360" alt="" loading="lazy" />
-			</li>
-			<li class="carousel-item">
-				<img ng-src="https://placehold.co/360" alt="" loading="lazy" />
 			</li>
 		</ul>
 
