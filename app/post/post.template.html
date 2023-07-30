@@ -1,0 +1,144 @@
+<article ng-class="['post', post.userData.role]" ng-repeat="post in vm.posts">
+	<header class="post__header">
+		<div class="post__header-container container valign-wrapper row">
+			<a href="#!/" class="post__user valign-wrapper col8 left">
+				<div class="stack avatar">
+					<img
+						class="avatar__logo avatar__logo--user circle"
+						ng-src="{{post.userData.avatar}}"
+						alt=""
+						width="45"
+						height="45"
+					/>
+					<img
+						class="avatar__logo avatar__logo--behind avatar__logo--moto circle"
+						ng-src="{{post.userData.moto}}"
+						alt=""
+						width="40"
+						height="40"
+					/>
+				</div>
+
+				<p
+					ng-class="['post__user-name', {'gradient-text': post.userData.role === 'crack'}]"
+				>
+					<span>{{post.userData.name}}</span>
+					<span
+						ng-class="['post__user-role', {hide: post.userData.role === 'usuario'}]"
+						>{{post.userData.role}}</span
+					>
+				</p>
+			</a>
+
+			<div class="post__ctas valign-wrapper col s4 right">
+				<button
+					class="post__cta post__cta--follow btn-flat"
+					ng-click="vm.followToggle(post.userData.id)"
+				>
+					{{post.userData.followed ? "Siguiendo" : "Seguir"}}
+				</button>
+				<button class="post__cta post__cta--report btn-flat btn-large">
+					<i class="material-icons">more_vert</i>
+				</button>
+			</div>
+		</div>
+	</header>
+
+	<figure class="post__body">
+		<ul class="post__carousel carousel carousel-slider center">
+			<!-- <li class="carousel-item" ng-repeat="img in post.postData.images">
+				<img ng-src="{{img}}" alt="" loading="lazy" />
+			</li> -->
+			<li class="carousel-item">
+				<img ng-src="https://placehold.co/360" alt="" loading="lazy" />
+			</li>
+			<li class="carousel-item">
+				<img ng-src="https://placehold.co/360" alt="" loading="lazy" />
+			</li>
+			<li class="carousel-item">
+				<img ng-src="https://placehold.co/360" alt="" loading="lazy" />
+			</li>
+		</ul>
+
+		<figcaption class="post__details">
+			<div class="post__metadata">
+				<div class="post__metadata-ctas valign-wrapper">
+					<button
+						class="post__metadata-cta post__metadata-cta--like btn-flat"
+						aria-label="Like"
+						ng-click="vm.likeToggle(post.postData.id)"
+					>
+						<img
+							class="responsive-img"
+							ng-src="./assets/icons/{{post.postData.liked ? 'liked' : 'like'}}.svg"
+							alt=""
+							aria-hidden="true"
+							width="28"
+							height="29"
+						/>
+					</button>
+					<button
+						class="post__metadata-cta post__metadata-cta--comment btn-flat"
+					>
+						<img
+							class="responsive-img"
+							ng-src="./assets/icons/comentary.svg"
+							alt=""
+							aria-hidden="true"
+							width="25"
+							height="22"
+						/>
+						<span>{{post.postData.totalComments}}</span>
+					</button>
+				</div>
+
+				<a href="#!/"
+					>A
+					<span class="post__details-highlight"
+						>{{post.postData.totalLikes}}</span
+					>
+					personas les gusta esto</a
+				>
+			</div>
+
+			<p class="post__description">
+				<span class="post__details-highlight"
+					>{{post.userData.name}}
+					<span
+						ng-class="['post__user-role', {hide: post.userData.role === 'usuario'}]"
+						>{{post.userData.role}}</span
+					>
+				</span>
+				{{post.postData.description}}
+			</p>
+
+			<a class="post__add-coment valign-wrapper" href="#!/">
+				<div class="stack avatar">
+					<img
+						class="avatar__logo avatar__logo--user circle"
+						ng-src="{{vm.user.avatar}}"
+						alt=""
+						width="28"
+						height="28"
+					/>
+					<img
+						class="avatar__logo avatar__logo--moto circle"
+						ng-src="{{vm.user.moto}}"
+						alt=""
+						width="25"
+						height="25"
+					/>
+				</div>
+
+				<span>Agrega un comentario...</span>
+			</a>
+
+			<div>
+				<span>{{post.postData.timestamp}} - </span>
+				<button class="post__translate post__details-highlight btn-flat">
+					Ver traducción
+				</button>
+			</div>
+		</figcaption>
+	</figure>
+</article>
