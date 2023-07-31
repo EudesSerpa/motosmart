@@ -46,6 +46,7 @@ h3 {
 	text-wrap: balance;
 }
 
+
 /* ------------------------------------*\
 	# Utility classes
 \*------------------------------------ */
@@ -54,27 +55,14 @@ h3 {
 	@include visually-hidden;
 }
 
-/* Stacking child elements */
-.stack {
-	display: grid;
-	grid-template-areas: "stack";
-	place-items: center;
+.gradient-text--primary {
+	@include gradient-text($primary-gradient);
 }
 
-.stack>* {
-	grid-area: stack;
-}
 
-.gradient-text {
-	color: transparent;
-	background-image: $primary-gradient;
-	-webkit-background-clip: text;
-	background-clip: text;
-	-webkit-text-fill-color: transparent;
-	-moz-text-fill-color: transparent;
-}
-
-// Materialize
+/* ------------------------------------*\
+	#  Materialize reset
+\*------------------------------------ */
 .container {
 	inline-size: 95%;
 }
@@ -85,31 +73,6 @@ button {
 
 figure {
 	margin: 0;
-}
-
-// Header
-$content-padding-inline: 10px;
-
-.nav {
-	background-color: $background;
-	border-block-end: 1px solid $primary-color;
-}
-
-.nav-wrapper,
-.nav__list {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	// padding-inline: $content-padding-inline;
-}
-
-.nav__logo,
-.nav__icon {
-	vertical-align: middle;
-}
-
-.nav__list {
-	padding: 0;
 }
 
 .push__notification-container {
@@ -127,90 +90,6 @@ $content-padding-inline: 10px;
 	background-color: $red;
 }
 
-// Categories
-.categories {
-	background-color: $background;
-}
-
-.categories__list {
-	max-inline-size: 100%;
-	overflow-x: auto;
-	block-size: 100%;
-	margin: 0;
-}
-
-.category__item {
-	background-color: $btn-background;
-}
-
-.scroller-container {
-	position: relative;
-	display: grid;
-	isolation: isolate;
-}
-
-.scroller {
-	$content-spacing: 8px;
-
-	display: flex;
-	align-items: center;
-	flex-wrap: nowrap;
-	gap: $content-spacing;
-	padding: calc($content-spacing / 2) 1.5px;
-	overflow-x: auto;
-	overflow-inline: auto;
-	overscroll-behavior-inline: contain;
-	scroll-snap-type: inline mandatory;
-	scroll-padding-inline: $content-spacing;
-	-webkit-overflow-scrolling: touch;
-}
-
-.scroller::-webkit-scrollbar {
-	display: none;
-}
-
-.scroller>* {
-	scroll-snap-align: center;
-	min-inline-size: max-content;
-}
-
-.pill {
-	padding: 7px 20px;
-	border-radius: 20px;
-}
-
-.pill:is(.active) {
-	color: $primary-color;
-	box-shadow: 0px 4px 4px #ff740026;
-}
-
-.gradient-border {
-	$border-width: 1px;
-	$inner-border-radius: 20px;
-	$outer-border-radius: 20px;
-
-	position: relative;
-	display: grid;
-	place-items: center;
-	inline-size: min-content;
-	background: $btn-background;
-	border-radius: $inner-border-radius;
-
-	&::before {
-		content: "";
-		position: absolute;
-		inset: calc($border-width * -1);
-		background: linear-gradient(#ffd500, #ff2800);
-		border-radius: $outer-border-radius;
-		z-index: -1;
-	}
-}
-
-// Post
-.post-section {
-	padding-block-start: 0;
-}
-
 // Avatar
 .avatar {
 	isolation: isolate;
@@ -226,45 +105,7 @@ $content-padding-inline: 10px;
 	}
 }
 
-// Aside navigation
-.aside {
-	position: fixed;
-	bottom: 0;
-	inline-size: 100%;
-	z-index: 10;
-	display: grid;
-	place-items: center;
-	gap: 8px;
 
-	&__nav {
-		block-size: auto;
-		padding-block: 20px 14px;
-	}
-
-	&__list {
-		inline-size: 100%;
-		justify-content: space-between;
-		gap: 4px;
-	}
-
-	&__item {
-		flex: 1;
-	}
-
-	&__link {
-		display: grid;
-		place-items: center;
-		line-height: 1.5;
-		gap: 4px;
-		padding: 0;
-		color: #686e7f;
-	}
-
-	&__icon {
-		inline-size: 24px;
-		aspect-ratio: 1;
-	}
-}
 
 // QR component
 .qr-cta {
@@ -272,6 +113,7 @@ $content-padding-inline: 10px;
 	place-items: center;
 	background: $primary-gradient;
 
+	// Materialize reset
 	&.btn-floating.btn-large {
 		inline-size: 60px;
 		block-size: 60px;

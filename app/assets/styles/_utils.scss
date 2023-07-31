@@ -1,3 +1,4 @@
+// For accessibility
 @mixin visually-hidden {
 	clip: rect(0 0 0 0);
 	clip-path: inset(50%);
@@ -6,4 +7,62 @@
 	position: absolute;
 	white-space: nowrap;
 	width: 1px;
+}
+
+// Stacking child elements
+.stack {
+	display: grid;
+	grid-template-areas: "stack";
+	place-items: center;
+}
+
+.stack>* {
+	grid-area: stack;
+}
+
+// Make text gradient
+@mixin gradient-text($gradient) {
+	color: transparent;
+	background-image: $primary-gradient;
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-moz-text-fill-color: transparent;
+}
+
+// Create a CSS scroller
+.scroller-container {
+	position: relative;
+	display: grid;
+	isolation: isolate;
+}
+
+.scroller {
+	--content-spacing: 8px;
+
+	display: flex;
+	align-items: center;
+	flex-wrap: nowrap;
+	gap: var(--content-spacing);
+	padding: calc(var(--content-spacing) / 2) 1.5px;
+	overflow-x: auto;
+	overflow-inline: auto;
+	overscroll-behavior-inline: contain;
+	scroll-snap-type: inline mandatory;
+	scroll-padding-inline: var(--content-spacing);
+	-webkit-overflow-scrolling: touch;
+
+	&::-webkit-scrollbar {
+		display: none;
+	}
+
+	&>* {
+		scroll-snap-align: center;
+		min-inline-size: max-content;
+	}
+}
+
+// Round like a pill
+.pill {
+	border-radius: $radius-pill;
 }
