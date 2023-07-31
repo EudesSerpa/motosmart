@@ -7,7 +7,7 @@ angular.module("post").component("postComponent", {
 	controller: [
 		"postsServices",
 		function PostController(postsServices) {
-			const mv = this;
+			const vm = this;
 
 			const ROLES = {
 				CRACK: "crack",
@@ -15,28 +15,28 @@ angular.module("post").component("postComponent", {
 				USUARIO: "usuario",
 			};
 
-			mv.posts = [];
-			mv.followToggle = followToggle;
-			mv.likeToggle = likeToggle;
-			mv.user = {
+			vm.posts = [];
+			vm.followToggle = followToggle;
+			vm.likeToggle = likeToggle;
+			vm.user = {
 				name: "Eudes Serpa",
 				role: ROLES.CRACK,
 				avatar: "assets/images/user.png",
 				moto: "assets/images/user-moto.png",
 			};
 
-			mv.$onInit = function () {
+			vm.$onInit = function () {
 				postsServices.query().$promise.then(function (posts) {
-					mv.posts = posts;
+					vm.posts = posts;
 				});
 			};
 
 			function getUser(id) {
-				return mv.posts.find(({ userData }) => userData.id === id);
+				return vm.posts.find(({ userData }) => userData.id === id);
 			}
 
 			function getPost(id) {
-				return mv.posts.find(({ postData }) => postData.id === id);
+				return vm.posts.find(({ postData }) => postData.id === id);
 			}
 
 			function followToggle(userId) {
@@ -55,7 +55,7 @@ angular.module("post").component("postComponent", {
 
 			// Materialize Carousel JS init
 			setTimeout(function () {
-				mv.$apply = (function () {
+				vm.$apply = (function () {
 					const elems = document.querySelectorAll(".carousel");
 
 					M.Carousel.init(elems, {

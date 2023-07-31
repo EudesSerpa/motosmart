@@ -7,14 +7,14 @@ angular.module("promo").component("promoComponent", {
 	controller: [
 		"promosServices",
 		function promoController(promosServices) {
-			const mv = this;
+			const vm = this;
 
-			mv.promos = [];
-			mv.getNewPrice = getNewPrice;
+			vm.promos = [];
+			vm.getNewPrice = getNewPrice;
 
-			mv.$onInit = function () {
+			vm.$onInit = function () {
 				promosServices.query().$promise.then(function (promos) {
-					mv.promos = promos;
+					vm.promos = promos;
 				});
 			};
 

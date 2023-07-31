@@ -1,5 +1,5 @@
-<header class="header-chat">
-	<nav class="z-depth-0 white">
+<header>
+	<nav class="chats__nav z-depth-0 white">
 		<div class="nav-wrapper valign-wrapper container grey-text">
 			<a href="#!/" class="brand-logo left">
 				<i class="large material-icons green-text">keyboard_arrow_left</i>
@@ -19,15 +19,28 @@
 	</nav>
 </header>
 
-<section class="section">
-	<form class="container">
-		<label class="valign-wrapper white">
-			<img class="responsive-img" src="assets/icons/search.svg" alt="" />
-			<input class="browser-default" type="search" placeholder="Buscar" />
+<section class="section container">
+	<form class="search">
+		<label class="search__container pill valign-wrapper">
+			<span class="only-sr">Search chat</span>
+			<img
+				class="responsive-img"
+				src="assets/icons/search.svg"
+				alt=""
+				aria-hidden="true"
+			/>
+			<input
+				ng-model="vm.queryChat"
+				class="search__input browser-default"
+				type="text"
+				placeholder="Buscar"
+			/>
 		</label>
 	</form>
 </section>
 
-<section class="chats-section section container">
-	<chat-component></chat-component>
-</section>
+<main class="container">
+	<section class="chats__section section">
+		<chat-component filter="vm.queryChat"></chat-component>
+	</section>
+</main>

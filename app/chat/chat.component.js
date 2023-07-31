@@ -3,18 +3,21 @@
 // Register `chatComponent` component, along with its associated controller and template
 angular.module("chat").component("chatComponent", {
 	templateUrl: "chat/chat.template.html",
+	bindings: {
+		filter: "<",
+	},
 	controllerAs: "vm",
 	controller: [
 		"chatsServices",
 		function chatController(chatsServices) {
-			const mv = this;
+			const vm = this;
 
-			mv.chats = [];
-			mv.getLastMessage = getLastMessage;
+			vm.chats = [];
+			vm.getLastMessage = getLastMessage;
 
-			mv.$onInit = function () {
+			vm.$onInit = function () {
 				chatsServices.query().$promise.then(function (chats) {
-					mv.chats = chats;
+					vm.chats = chats;
 				});
 			};
 

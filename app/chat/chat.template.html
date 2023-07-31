@@ -1,7 +1,7 @@
 <a
 	href="#!/chat/{{chat.chat.id}}"
 	class="col s12 m7"
-	ng-repeat="chat in vm.chats"
+	ng-repeat="chat in vm.chats | filter: vm.filter"
 >
 	<article class="chat card horizontal z-depth-0 valign-wrapper">
 		<aside class="chat__aside valign-wrapper">

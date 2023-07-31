@@ -1,8 +1,8 @@
-/* ------------------------------------*\
-	#  Chat section
-\*------------------------------------ */
+.chats__nav {
+	border-bottom: 1px solid #00000033;
+}
 
-.chats-section {
+.chats__section {
 	padding-block-start: 0;
 
 	& .avatar__logo--moto {
@@ -15,22 +15,21 @@
 	#  Searcher
 \*------------------------------------ */
 
-.header-chat nav {
-	border-bottom: 1px solid #00000033;
-}
+.search {
+	&__container {
+		padding: 5px 10px;
+		background-color: $pure-white;
+		gap: 6px;
 
-form label {
-	gap: 6px;
-	border-radius: 50rem;
-	box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-	padding: 5px 10px;
-	background-color: $pure-white;
-}
+		box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+	}
 
-form label input {
-	background-color: transparent;
-	font-family: inherit;
-	line-height: 2;
-	font-size: 16px;
-	border: none;
+	&__input {
+		background-color: transparent;
+		font-family: inherit;
+		line-height: 2;
+		font-size: 16px;
+		border: none;
+		inline-size: 100%;
+	}
 }
