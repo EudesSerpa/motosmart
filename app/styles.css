@@ -371,6 +371,9 @@ figure {
   background-color: #FF2800;
 }
 
+/* ------------------------------------*\
+	#  Components
+\*------------------------------------ */
 .avatar {
   isolation: isolate;
 }

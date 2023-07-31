@@ -90,7 +90,11 @@ figure {
 	background-color: $red;
 }
 
-// Avatar
+
+/* ------------------------------------*\
+	#  Components
+\*------------------------------------ */
+// Avatar component
 .avatar {
 	isolation: isolate;
 
@@ -104,8 +108,6 @@ figure {
 		}
 	}
 }
-
-
 
 // QR component
 .qr-cta {
