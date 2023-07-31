@@ -1,0 +1,50 @@
+/* ------------------------------------*\
+	#  Chat card
+\*------------------------------------ */
+
+.chat {
+	&.card {
+		color: $grey-2;
+		background-color: transparent;
+		margin: 15px;
+
+		&.horizontal {
+			gap: 28px;
+		}
+	}
+
+	&__details {
+		&.card-content {
+			position: relative;
+			padding: 0;
+			padding-block: 10px 7px;
+			border-bottom: 1px solid #00000033;
+		}
+
+		& .truncate {
+			max-inline-size: 27ch;
+		}
+
+	}
+
+	&__name {
+		color: $grey;
+	}
+
+	&__metadata {
+		display: grid;
+		justify-items: end;
+
+		&.push__notification-container {
+			position: absolute;
+			top: 10px;
+			right: 0;
+
+			& .badge.push__notification {
+				position: initial;
+				margin-top: -4px;
+				font-size: 8px;
+			}
+		}
+	}
+}

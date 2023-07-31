@@ -1,4 +1,4 @@
 "use strict";
 
 // Define the `chatPage` module
-angular.module("chatPage", []);
+angular.module("chatPage", ["chat"]);

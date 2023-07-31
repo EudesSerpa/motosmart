@@ -1,0 +1,47 @@
+<a
+	href="#!/chat/{{chat.chat.id}}"
+	class="col s12 m7"
+	ng-repeat="chat in vm.chats"
+>
+	<article class="chat card horizontal z-depth-0 valign-wrapper">
+		<aside class="chat__aside valign-wrapper">
+			<div class="stack avatar">
+				<img
+					class="avatar__logo avatar__logo--user circle"
+					ng-src="{{chat.user.avatar}}"
+					alt="{{chat.user.name}}"
+					width="45"
+					height="45"
+				/>
+				<img
+					class="avatar__logo avatar__logo--behind avatar__logo--moto circle"
+					ng-src="{{chat.user.moto}}"
+					alt=""
+					width="40"
+					height="40"
+				/>
+			</div>
+		</aside>
+
+		<div class="chat__details-container card-stacked">
+			<div class="chat__details card-content">
+				<div class="valign-wrapper">
+					<p class="chat__name">{{chat.user.name}}</p>
+				</div>
+
+				<p class="truncate">{{vm.getLastMessage(chat.chat.messages)}}</p>
+
+				<div class="chat__metadata push__notification-container">
+					<span class="chat__timestamp">{{chat.chat.metadata.timestamp}}</span>
+
+					<span
+						class="push__notification new badge"
+						data-badge-caption=""
+						ng-if="chat.chat.metadata.totalMessages !== 0"
+						>{{chat.chat.metadata.totalMessages}}</span
+					>
+				</div>
+			</div>
+		</div>
+	</article>
+</a>

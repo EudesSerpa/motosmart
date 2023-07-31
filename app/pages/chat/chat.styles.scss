@@ -1,3 +1,20 @@
+/* ------------------------------------*\
+	#  Chat section
+\*------------------------------------ */
+
+.chats-section {
+	padding-block-start: 0;
+
+	& .avatar__logo--moto {
+		translate: 60% 0;
+	}
+}
+
+
+/* ------------------------------------*\
+	#  Searcher
+\*------------------------------------ */
+
 .header-chat nav {
 	border-bottom: 1px solid #00000033;
 }
@@ -16,53 +33,4 @@ form label input {
 	line-height: 2;
 	font-size: 16px;
 	border: none;
-}
-
-// chats
-.chats-section {
-	padding-block-start: 0;
-
-	& .avatar__logo--moto {
-		translate: 60% 0;
-	}
-}
-
-// Card
-.card {
-	background-color: transparent;
-	margin: 15px;
-}
-
-.card.horizontal {
-	gap: 28px;
-}
-
-.card.horizontal .card-content {
-	padding: 0;
-	padding-block: 10px 7px;
-	border-bottom: 1px solid #00000033;
-	position: relative;
-
-	& .truncate {
-		max-inline-size: 27ch;
-	}
-}
-
-.hora-container {
-	position: absolute;
-	margin-left: auto;
-	display: grid;
-}
-
-.hora-container.push__notification-container {
-	position: absolute;
-	top: 10px;
-	right: 0;
-	place-items: flex-end;
-}
-
-.hora-container.push__notification-container .badge.push__notification {
-	position: initial;
-	margin-top: -4px;
-	font-size: 8px;
 }
